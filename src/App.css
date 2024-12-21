@@ -1,0 +1,382 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: 	#eeeeee;
+}
+
+
+/************ Navbar Css ************/
+.navbar,.navbar-cont{
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    background-color: 	#eeeeee;
+    z-index: 10;
+}
+
+.navbar-logo{
+    height: 2vh;
+    width: auto;
+    padding: 2vh;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 0 2.5vh;
+    text-align: center;
+    color: #3f3f3f;
+    font-size: 1.7vh;
+}
+
+/************ Banner Css ************/
+.banner {
+  position: relative;
+  width: auto;
+  height: 70vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.banner-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007BFF;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #007BFF;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+  margin-left: 13.5rem;
+  margin-top: 6rem;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007BFF;
+  }
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 11px;
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+
+
+
+
+/************ Services Css ************/
+  .services-container {
+    margin-top: 1vh;
+    height: 60vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative; 
+    align-items: center;
+  }
+  
+  .services-container::after {
+    content: "";
+    position: absolute;
+    bottom: -11px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: calc(100vw - 17px); 
+    height: 11px; 
+    background-color: white; 
+  }
+  
+  
+  .services-title {
+    margin-top: 5vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: 	#666666;
+  }
+  
+  .services-grid {
+    transform: translateY(50%); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    text-align: center;
+    align-items: center;
+    margin: 0 auto; 
+  }
+  
+  .service-card {
+    text-align: left;
+    flex: 1 1 calc(25% - 1.5rem); 
+    box-sizing: border-box;
+    min-width: 250px;
+    margin-bottom: 1.5rem; 
+  }
+  
+  .service-card-icon {
+    margin-bottom: 1rem;
+    max-width: 40px;
+  }
+  
+  .service-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: 	#666666;
+  }
+  
+  .service-card-description {
+    color: #979797;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card-link {
+    color: 	#eeeeee;
+    padding: 1vh;
+    text-decoration: none;
+    border-radius: 3vh;
+    background-color: #0088cc;
+  }
+  
+  .service-card-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 1024px) {
+    .service-card {
+      flex: 1 1 calc(50% - 1.5rem); 
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .service-card {
+      flex: 1 1 100%; 
+    }
+  }
+  
+/************ Works Css ************/
+.carousel-container {
+  display: flex;
+  height: 100%;
+  background-color: white;
+  border-top: 11px solid white;
+  border-bottom: 11px solid white;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 6;
+  overflow-x: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  gap: 1vh;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item:hover .carousel-image {
+  transform: scale(1.05); 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(102, 102, 102, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .overlay {
+  opacity: 1;
+}
+
+.details-btn {
+  color: 	#eeeeee;
+  padding: 10px 20px;
+  background-color: 	#0088cc;
+  border: none;
+  border-radius: 3vh;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: 	#0088cc;
+}
+
+/************ Comments Css ************/
+.comment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
+}
+
+.comment-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.comment-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Kartı sola kaydırma */
+.comment-card.swipe-left {
+  transform: translateX(-100%);  /* Kart sola kayar */
+  opacity: 0;  /* Kart kaybolur */
+}
+
+/* Kartı sağa kaydırma */
+.comment-card.swipe-right {
+  transform: translateX(100%);  /* Kart sağa kayar */
+  opacity: 0;  /* Kart kaybolur */
+}
+
+.comment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Görselin kutuya uyumlu olmasını sağlar */
+}
+
+
+/************ Contact Css ************/
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.contact-info,
+.contact-form {
+  width: 48%; 
+}
+
+.contact-info {
+  padding-left: 20px; 
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: #0088cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3vh;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  border-radius: 3vh;
+  background-color: #0088cc;
+}
+
+.status-message {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.my-info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+.my-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
