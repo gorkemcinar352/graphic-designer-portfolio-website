@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "framer": "^2.4.1",
+    "framer-motion": "^10.18.0",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -11,8 +13,6 @@
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
     "emailjs-com": "^3.2.0",
-    "framer": "^2.4.1",
-    "framer-motion": "^11.15.0",
     "infinite-react-carousel": "^1.2.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
