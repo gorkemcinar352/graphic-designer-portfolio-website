@@ -10,7 +10,7 @@ const ServiceCard = ({ icon, title, description }) => {
       <img className='service-card-icon' src={icon} alt="" />
       <h3 className='service-card-title'>{title}</h3>
       <p className='service-card-description'>{description}</p>
-      <a href="#" className='service-card-link'>Details</a>
+      <a href="/home" className='service-card-link'>Details</a>
     </div>
   );
 };
